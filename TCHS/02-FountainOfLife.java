@@ -6,6 +6,9 @@ public class FountainOfLife {
 			return -1.0;
 		}
 		
+		// Since poison/elixir should be 50/50, then 
+		// pool + elixir*time = poison*time, 
+		// so t = pool / (poison - elixir) 
 		return (double)pool / (poison - elixir);
 	}
 	
