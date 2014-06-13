@@ -13,7 +13,7 @@ public class BinaryCode {
 
 		for (int i = 0; i < encoded.length(); i++) {
 			int encCur = Character.getNumericValue(encoded.charAt(i));
-			decNext = encCur - decCur - (i == 0 ? 0 : decPrev);
+			decNext = encCur - decCur - decPrev;
 			
 			if (i == encoded.length() - 1) {
 				if (encCur != decCur + decPrev) {
